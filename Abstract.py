@@ -2,9 +2,9 @@ import streamlit as st
 
 st.set_page_config(
     layout="wide",
-    page_title="arXix Research article Recommender"
+    page_title="arXiv Research Article Recommender"
 )
-st.title("arXix Research Article Recommender")
+st.title("arXiv Research Article Recommender")
 st.write('''
          Enter some text to get article recommendations! \n
          I have trained a K-Means model using BERT embeddings on the arXiv dataset which is available [here](https://www.kaggle.com/datasets/Cornell-University/arxiv).\n 
