@@ -14,8 +14,10 @@ st.set_page_config(
 st.title("Recommender")
 c1,c2 = st.columns(2)
 input_text = st.text_area('Enter text')
-
-loaded_model = joblib.load('knn.joblib')
+@st.cache
+def load_model():
+    return joblib.load('knn.joblib')
+loaded_model = load_model()
 prediction = loaded_model.predict(embedder.encode([input_text]))
 ##########################################################################
 
